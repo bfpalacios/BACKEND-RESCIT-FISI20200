@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container mt-4">
+		<div class="col-sm-6">
+			<form th:action="@{/add}" th:object=${paciente} method="POST">
+				<div class="card">
+					<div class="card-header"></div>
+					<div class="card-body">
+						<div class="form-group">
+							<label>ID</label> 
+							<input th:field="*{idPaciente}" type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>NOMBRES</label> 
+							<input th:field="*{nombres}" type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>APELLIDO PATERNO</label> 
+							<input th:field="*{apellidoPaterno}" type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>APELLIDO MATERNO</label> 
+							<input th:field="*{apellidoMaterno}" type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>SEXO</label> 
+							<input th:field="*{sexo}" type="text" class="form-control">
+						</div>
+						<!--<div class="form-group">
+							<label>FECHA DE NACIMIENTO</label> 
+							<input th:field="*{fechaNacimiento}" type="text" class="form-control">
+						</div> -->
+						<div class="form-group">
+							<label>ESTADO CIVIL</label> 
+							<input th:field="*{estadoCivil}" type="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>DIRECCION</label> 
+							<input th:field="*{direccion}" type="text" class="form-control">
+						</div>
+						<!--<div class="form-group">
+							<label>FECHA DE INSCRIPCION</label> 
+							<input th:field="*{fechaInscripcion}" type="text" class="form-control">
+						</div> -->
+					</div>
+					<div class="card-footer">
+					<input type="submit" value="GUARDAR" class="btn btn-success">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

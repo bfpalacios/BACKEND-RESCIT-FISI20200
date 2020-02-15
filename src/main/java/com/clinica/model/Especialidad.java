@@ -18,11 +18,16 @@ public class Especialidad {
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private int idEspecialidad;
 	
-	@Column(name="nombre", length=40)
+	@Column(name="nombre", length=50)
 	@NotNull
 	private String nombre;
+	
+	@Column(name="descripcion", length=1000)
 	private String descripcion;
+	
 	private int numConsultorio;
+	
+	@Column(name="imageURL", length=1000)
 	private String imageURL;
 
 	public int getIdEspecialidad() {

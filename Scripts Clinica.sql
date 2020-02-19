@@ -15,20 +15,20 @@ SELECT * FROM PACIENTE ORDER BY apellido_paterno;
 
 /*======================================================================*/
 
-INSERT INTO ESPECIALIDAD VALUES(1,'Está orientada al abordaje integral del paciente que acude por cualquier motivo de consulta, se realizará la evaluación específica del problema. Trabaja en estrecha comunicación con las consultas especializadas a fin de derivar a niveles superiores de atención aquellos casos que requieran de atención más compleja, cirugía o algún tipo de rehabilitación.','https://www.miclinicaintegral.com/content/20180724162415-1.jpg','Medicina General',101);
+INSERT INTO ESPECIALIDAD VALUES(1,'Está orientada al abordaje integral del paciente que acude por cualquier motivo de consulta, se realizará unaa evaluación específica del problema y en algunos se le puede derivar a niveles superiores que requieran de atención más compleja, cirugía o algún tipo de rehabilitación.','https://www.miclinicaintegral.com/content/20180724162415-1.jpg','Medicina General',101);
 INSERT INTO ESPECIALIDAD VALUES(2,'Encargada del tratamiento de las enfermedades de los ojos, incluyendo el globo ocular, su musculatura, el sistema lagrimal y los párpados.','http://clinicasanjuandedioslima.pe/wp-content/uploads/2019/05/Clinica-san-juan-de-dios-Oftalmologia.jpg','Oftalmología',103);
 INSERT INTO ESPECIALIDAD VALUES(3,'Encargada del estudio de las enfermedades del aparato respiratorio y centra su campo de actuación en el diagnóstico, tratamiento y prevención de las enfermedades del pulmón.','https://i.pinimg.com/originals/ea/b7/81/eab78197dec436d02bd2c3e373c7a424.jpg','Neumología',106);
 INSERT INTO ESPECIALIDAD VALUES(4,'Es la especialidad médica que tiene por objeto la corrección y mejoramiento de anormalidades de origen congénito, adquirido, tumoral o involutiva que requieran reparación o reposición de la forma corporal y su función.','https://cdn.aarp.net/content/dam/aarp/health/healthy-living/2015-10/1140-plastic-surgery-consultation.imgcache.revdaaddfeb380cd1aba7c94e5063c4b99a.jpg','Cirugía Plástica',108);
 INSERT INTO ESPECIALIDAD VALUES(5,'Es la especialidad de la medicina centrada en las enfermedades y en las funciones de la piel (el órgano más extenso del cuerpo humano)','https://www.detecta.pe/images/dermatologia.jpg','Dermatología',102);
 INSERT INTO ESPECIALIDAD VALUES(6,'Parte de la medicina encargada del estudio, diagnóstico y tratamiento de las enfermedades del corazón y del aparato circulatorio.','https://smibamedicina.files.wordpress.com/2019/02/cardiologia-clinica.jpg?w=1100','Cardiología',105);
 INSERT INTO ESPECIALIDAD VALUES(7,'Especialidad de la medicina dedicada al cuidado del sistema reproductor femenino, que atienden las cuestiones vinculadas al útero, la vagina y los ovarios.','https://www.clinicainternacional.com.pe/blog/wp-content/uploads/2018/04/clinica-international-ginecologia-papanicolaou-cuello-uterino.jpg','Ginecología',104);
-INSERT INTO ESPECIALIDAD VALUES(8,'Estudio de la función normal y las enfermedades del esófago, estómago, intestino delgado, colon y recto, páncreas, vesícula biliar, conductos biliares e hígado.','https://lh3.googleusercontent.com/proxy/XhZhxmYHCg96Ca0OT5eWISIieqIK6AV9MUnZPvueQErszds5GhgrTTlmNp323rgN039Qx0dimApgSG67iBhnLUn4J9yqczl5f1ap2qrEeKs4ZFKd5oiQefERqzlE_uFecHOmkby4-6Mi_Fc3kTZ7SY5WYqYuCvTrCQDojUQvQnZ3hA','Gastroenterología',107);
+INSERT INTO ESPECIALIDAD VALUES(8,'Estudio de la función normal y las enfermedades del esófago, estómago, intestino delgado, colon y recto, páncreas, vesícula biliar, conductos biliares e hígado.','https://www.jasus24.com/wp-content/uploads/2018/10/body-health-stomach-1024x569.jpg','Gastroenterología',107);
 INSERT INTO ESPECIALIDAD VALUES(9,'Se basa en la evaluación, el diagnóstico funcional y la rehabilitación de las alteraciones del movimiento corporal humano (disfunciones y discapacidad) causadas por alguna lesión o enfermedad adquirida o genética.','https://e.rpp-noticias.io/normal/2019/09/27/343434_845594.jpg','Terapia Física y Rehabilitación',110);
 INSERT INTO ESPECIALIDAD VALUES(10,'Se ocupa de la prevención, el diagnóstico y tratamiento de las enfermedades que afectan a cualquier parte de la estructura mandibular: dientes, encías, periodonto, articulación temporomandibular, el conjunto del sistema muscular y nervioso.','https://upla.edu.pe/wp-content/uploads/2019/10/web-ODONTOLOGIA-UPLA-640x320.jpg','Odontología',103);
 INSERT INTO ESPECIALIDAD VALUES(11,'Se ocupa de la prevención, diagnóstico y tratamiento de los cambios nutricionales y metabólicos relacionados con enfermedades agudas o crónicas y con condiciones causadas por un exceso o falta de energía.','https://lh3.googleusercontent.com/Ln9ziXhlaJP4j5t1Y8uoi_mVu7ltDMQSQ_jMpOQHL9wDqC4y1_H3BMalJ-duNlxsJuu6JPqP=w1080-h608-p-no-v0','Nutrición',103);
 INSERT INTO ESPECIALIDAD VALUES(12,'Se encarga de la investigación de todos los factores, evaluación, diagnóstico, tratamiento y prevención que afecten a la salud mental y a la conducta adaptativa, en condiciones que puedan generar malestar subjetivo y sufrimiento al individuo humano.','https://www.ceupe.com/images/easyblog_articles/2139/psicologa-clnica.jpg','Psicología',104);
 
-SELECT id_especialidad,nombre,num_consultorio,descripcion,imageurl FROM ESPECIALIDAD;
+-- SELECT id_especialidad,nombre,num_consultorio,descripcion,imageurl FROM ESPECIALIDAD;
 
 /*======================================================================*/
 
@@ -63,11 +63,11 @@ INSERT INTO MEDICO VALUES(28, 'Cabrera','Mendez','Nancy',8);
 INSERT INTO MEDICO VALUES(29, 'Urruti','Delgado','Sharon',10);
 INSERT INTO MEDICO VALUES(30, 'Manavi','Arce','Jorge',12);
 
-SELECT m.id_medico,m.nombres,m.apellido_paterno,m.apellido_materno,e.nombre
+/*SELECT m.id_medico,m.nombres,m.apellido_paterno,m.apellido_materno,e.nombre
 FROM MEDICO m
 INNER JOIN ESPECIALIDAD e ON m.especialidad_id = e.id_especialidad
 ORDER BY m.id_medico;
-
+*/
 /*======================================================================*/
 
 INSERT INTO HORARIO VALUES(1,'Lunes','08:00','12:00',1);
@@ -108,12 +108,12 @@ INSERT INTO HORARIO VALUES(35,'Sabado','16:00','19:00',1);
 INSERT INTO HORARIO VALUES(36,'Sabado','08:00','12:00',3);
 INSERT INTO HORARIO VALUES(37,'Sabado','09:00','13:00',1);
 
-SELECT m.nombres,m.apellido_paterno,m.apellido_materno,
+/*SELECT m.nombres,m.apellido_paterno,m.apellido_materno,
 h.dia,h.hora_inicio,h.hora_fin
 FROM HORARIO h
 INNER JOIN MEDICO m ON h.medico_id = m.id_medico
 ORDER BY m.id_medico;
-
+*/
 /*======================================================================*/
 
 INSERT INTO CITA_MEDICA VALUES(1,'Finalizado','2020-01-27 15:00:00',3,'73524246');
@@ -128,12 +128,12 @@ INSERT INTO CITA_MEDICA VALUES(9,'Proceso','2020-02-27 15:00:00',5,'68412015');
 INSERT INTO CITA_MEDICA VALUES(10,'Finalizado','2020-02-11 15:00:00',8,'85641023');
 INSERT INTO CITA_MEDICA VALUES(11,'Proceso','2020-02-28 15:00:00',1,'08569874');
 
-SELECT c.id_cita, p.dni, p.nombres, p.apellido_paterno, p.apellido_materno, m.id_medico, m.nombres, m.apellido_paterno, m.apellido_materno,
+/*SELECT c.id_cita, p.dni, p.nombres, p.apellido_paterno, p.apellido_materno, m.id_medico, m.nombres, m.apellido_paterno, m.apellido_materno,
 e.nombre,c.estado, c.fecha
 FROM CITA_MEDICA c
 INNER JOIN PACIENTE p ON c.paciente_id = p.dni
 INNER JOIN MEDICO m ON c.medico_id = m.id_medico
 INNER JOIN ESPECIALIDAD e ON m.especialidad_id = e.id_especialidad
-ORDER BY c.estado;
-
+ORDER BY c.estado, c.id_cita;
+*/
 /*======================================================================*/

@@ -36,6 +36,8 @@ public class CitaMedica {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fecha;
 	
+	private String tipoPago;
+	
 	public int getIdCita() {
 		return idCita;
 	}
@@ -69,6 +71,13 @@ public class CitaMedica {
 	}
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
+	}
+	
+	public String getTipoPago() {
+		return tipoPago;
+	}
+	public void setTipoPago(String tipoPago) {
+		this.tipoPago = tipoPago;
 	}
 
 	

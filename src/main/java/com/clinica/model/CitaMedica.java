@@ -25,6 +25,8 @@ public class CitaMedica {
 	
 	private String estado;
 	
+	private boolean estadoPago;
+	
 	@JoinColumn(name = "paciente_id", nullable = false)
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Paciente paciente_id;
@@ -64,6 +66,13 @@ public class CitaMedica {
 	}
 	public void setEstado(String estado) {
 		this.estado = "Proceso";
+	}
+	
+	public boolean isEstadoPago() {
+		return estadoPago;
+	}
+	public void setEstadoPago(boolean estadoPago) {
+		this.estadoPago = estadoPago;
 	}
 	
 	public Date getFecha() {

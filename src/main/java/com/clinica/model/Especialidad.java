@@ -27,6 +27,8 @@ public class Especialidad {
 	
 	private int numConsultorio;
 	
+	private double precio;
+	
 	@Column(name="imageURL", length=1000)
 	private String imageURL;
 
@@ -57,6 +59,14 @@ public class Especialidad {
 	public void setNumConsultorio(int numConsultorio) {
 		this.numConsultorio = numConsultorio;
 	}
+	
+	public double getPrecio() {
+		return precio;
+	}
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+	
 	public String getImageURL() {
 		return imageURL;
 	}

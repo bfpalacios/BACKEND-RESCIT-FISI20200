@@ -43,6 +43,9 @@ public class CitaMedicaService implements ICitaMedicaService{
 
 	@Override
 	public CitaMedica guardarCita(CitaMedica cita) {
+		cita.setEstado("Proceso");
+		cita.setEstadoPago(false);
+		
 		//GUARDANDO PACIENTE EN CITA
 		String idPaciente = cita.getPaciente_id().getDni();		//Obtener el Id del paciente	
 		Paciente p = pacienteS.obtenerPaciente(idPaciente);		//Buscar y capturar al paciente	

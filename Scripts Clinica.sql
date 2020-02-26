@@ -4,6 +4,12 @@ create database db_clinica;
 use db_clinica;
 
 /*======================================================================*/
+INSERT INTO USUARIO VALUES('73524246','contraseña','paciente');
+INSERT INTO USUARIO VALUES('12345678','contraseña','administrador');
+
+-- SELECT * FROM USUARIO
+
+/*======================================================================*/
 
 INSERT INTO PACIENTE VALUES('73524246','Ita','Orellana','Calle Federico Moore 140','brian.orellana@unmsm.edu.pe','Soltero','2020-01-21','1996-12-13','Brian Gerard','Masculino');
 INSERT INTO PACIENTE VALUES('68412015','Baldeon','Reyes','Av.Mexico 724','cristelreyes01@gmail.com','Soltero','2020-01-15','1997-10-12','Cristel Alexandra','Femenino');

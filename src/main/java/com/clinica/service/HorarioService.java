@@ -46,6 +46,23 @@ public class HorarioService implements IHorarioService{
 		Horario horario = horarioRepository.save(h);	
 		return horario;
 	}
+	
+	@Override
+	public void guardarHorarios(List<Horario> h) {
+		//GUARDANDO MEDICO EN HORARIO
+
+		//int idMedico;
+		//Medico objMedico;
+
+		for(int i=0; i<h.size();i++) {
+			System.out.print(h.get(i).getMedico_id().getIdMedico());
+			int idMedico = h.get(i).getMedico_id().getIdMedico();		//Obtener el Id del medico
+			System.out.print(idMedico);
+			Medico objMedico = medicoS.obtenerMedico(idMedico);			//Buscar y capturar al medico	
+			h.get(i).setMedico_id(objMedico);
+			horarioRepository.save(h.get(i));		
+		}
+	}
 
 	
 }

@@ -44,8 +44,8 @@ public class UsuarioController {
 		"tipoPerfil":"paciente"
 	}*/
 	
-	@PostMapping("/login")
-	public Usuario login(@RequestBody Usuario user) {
-		return usuarioService.loginUsuario(user);
+	@GetMapping("/login/{dni}/{password}")
+	public Usuario login(@PathVariable(value="dni") String dni, @PathVariable(value="password") String password) {
+		return usuarioService.loginUsuario(dni, password);
 	}
 }

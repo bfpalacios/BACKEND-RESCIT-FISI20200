@@ -23,7 +23,7 @@ public class Usuario {
 	private String password;
 
 	@NotNull
-	private String tipoPerfil;
+	private String perfil;
 
 	public String getDni() {
 		return dni;
@@ -39,11 +39,11 @@ public class Usuario {
 		this.password = password;
 	}
 
-	public String getTipoPerfil() {
-		return tipoPerfil;
+	public String getPerfil() {
+		return perfil;
 	}
-	public void setTipoPerfil(String tipoPerfil) {
-		this.tipoPerfil = tipoPerfil;
+	public void setPerfil(String perfil) {
+		this.perfil = perfil;
 	}
 
 }

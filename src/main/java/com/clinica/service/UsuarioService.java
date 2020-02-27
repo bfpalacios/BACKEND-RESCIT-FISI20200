@@ -36,13 +36,13 @@ public class UsuarioService implements IUsuarioService {
 		return user;
 	}
 	
-	public Usuario loginUsuario(Usuario u){
+	public Usuario loginUsuario(String dni, String password){
 		//Usuario extraido de la DB
-		Usuario userObtenido = usuarioRepository.getOne(u.getDni());
-		
+		Usuario userObtenido = usuarioRepository.getOne(dni);
+	
 		//Comparamos password de: usuario post y usuario de la DB
-		boolean band = encoder.matches(u.getPassword(), userObtenido.getPassword());
-		
+		boolean band = encoder.matches(password, userObtenido.getPassword());
+	
         if(band)
         	return userObtenido;
         else

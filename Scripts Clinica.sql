@@ -8,6 +8,7 @@ INSERT INTO USUARIO VALUES('73524246','contraseña','paciente');
 INSERT INTO USUARIO VALUES('12345678','contraseña','administrador');
 
 -- SELECT * FROM USUARIO
+delete from usuario where dni='73524246';
 
 /*======================================================================*/
 

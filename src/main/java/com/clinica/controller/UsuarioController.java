@@ -41,7 +41,7 @@ public class UsuarioController {
 	/*{
 		"dni":"73524246",
 		"password":"contraseña",
-		"tipoPerfil":"paciente"
+		"perfil":"paciente"
 	}*/
 	
 	@GetMapping("/login/{dni}/{password}")

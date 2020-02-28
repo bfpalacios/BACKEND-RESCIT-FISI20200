@@ -41,36 +41,36 @@ public class HorarioController {
 		return ResponseEntity.ok().body(h);
 	}
 	
-	@PostMapping("/horarios/lista")
-	public void guardarHorarios(@RequestBody List<Horario> horarios) {
-		horarioService.guardarHorarios(horarios);
+	@PostMapping("/horarios/list")
+	public List<Horario> guardarHorarios(@RequestBody List<Horario> horarios) {
+		return horarioService.guardarHorarios(horarios);
 	}
 	//EN POSTMAN:
 	/*[
 		{
-			"idHorario":"5",
+			"idHorario":"50",
 			"dia":"Domingo",
 			"horaInicio":"13:00:00",
 			"horaFin":"15:00:00",
-			"medido_id":{
+			"medico_id":{
 				"idMedico":"2"
 			}
 		},
 		{
-			"idHorario":"10",
+			"idHorario":"60",
 			"dia":"Domingo",
 			"horaInicio":"13:00:00",
 			"horaFin":"15:00:00",
-			"medido_id":{
+			"medico_id":{
 				"idMedico":"2"
 			}
 		},
 		{
-			"idHorario":5,
+			"idHorario":70,
 			"dia":"Domingo",
 			"horaInicio":"13:00:00",
 			"horaFin":"15:00:00",
-			"medido_id":{
+			"medico_id":{
 				"idMedico":2
 			}
 		}

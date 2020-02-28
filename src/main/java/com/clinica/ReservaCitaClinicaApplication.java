@@ -21,9 +21,9 @@ public class ReservaCitaClinicaApplication extends SpringBootServletInitializer 
 	}
 
 	/*
-	 * En la clase CorsRegistration que se encuenta dentro de CorsRegistry, sus
-	 * métodos retornan el mismo objeto, así que se puede seguir llamando a más
-	 * metodos de esa clase(CorsRegistration) y así seguir añadiendo más
+	 * En la clase CorsRegistration que se encuenta dentro de CorsRegistry, 
+	 * sus métodos retornan el mismo objeto, así que se puede seguir llamando 
+	 * a más metodos de esa clase(CorsRegistration) y así seguir añadiendo más
 	 * configuraciones al CORS. Algunos de estos métodos: allowedHeaders,
 	 * allowedMethods, allowedOrigins, maxAge, etc.
 	 */
@@ -32,7 +32,8 @@ public class ReservaCitaClinicaApplication extends SpringBootServletInitializer 
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://localhost:4200").allowedMethods("GET", "POST");
+				registry.addMapping("/**").allowedOrigins("http://localhost:4200")
+				.allowedMethods("GET", "POST");
 			}
 		};
 	}

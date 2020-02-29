@@ -53,7 +53,8 @@ public class CitaMedicaController {
 		"medico_id":{
 			"idMedico": "2"
 		},
-		"fecha":"2019-12-20T10:30:00"
+		"fecha":"2019-12-20T10:30:00",
+		"tipoPago":"presencial"
 	}*/
 		
 	@PutMapping("/citas")

@@ -25,6 +25,8 @@ public class CitaMedica {
 	
 	private String estado;
 	
+	private boolean estadoPago;
+	
 	@JoinColumn(name = "paciente_id", nullable = false)
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Paciente paciente_id;
@@ -35,6 +37,8 @@ public class CitaMedica {
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fecha;
+	
+	private String tipoPago;
 	
 	public int getIdCita() {
 		return idCita;
@@ -64,11 +68,25 @@ public class CitaMedica {
 		this.estado = "Proceso";
 	}
 	
+	public boolean isEstadoPago() {
+		return estadoPago;
+	}
+	public void setEstadoPago(boolean estadoPago) {
+		this.estadoPago = estadoPago;
+	}
+	
 	public Date getFecha() {
 		return fecha;
 	}
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
+	}
+	
+	public String getTipoPago() {
+		return tipoPago;
+	}
+	public void setTipoPago(String tipoPago) {
+		this.tipoPago = tipoPago;
 	}
 
 	

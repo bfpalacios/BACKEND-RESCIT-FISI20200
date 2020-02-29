@@ -30,6 +30,9 @@ public class Medico {
 	@Column(name="apellido_materno")
 	private String apellidoMaterno;
 	
+	@Column(name="imageURL", length=1000)
+	private String imageURL; 
+	
     @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name="especialidad_id", nullable = false)
 	private Especialidad especialidad_id;
@@ -62,6 +65,13 @@ public class Medico {
 		this.apellidoMaterno = apellidoMaterno;
 	}
 
+	public String getImageURL() {
+		return imageURL;
+	}
+	public void setImageURL(String imageURL) {
+		this.imageURL = imageURL;
+	}
+	
 	public Especialidad getEspecialidad_id() {
 		return especialidad_id;
 	}

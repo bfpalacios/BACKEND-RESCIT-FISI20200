@@ -37,8 +37,8 @@ public class PacienteController {
 	}
 
 	@PostMapping("/pacientes")
-	public void guardarPaciente(@RequestBody Paciente pa) {
-		pacienteService.guardarPaciente(pa);
+	public Paciente guardarPaciente(@RequestBody Paciente pa) {
+		return pacienteService.guardarPaciente(pa);
 	}
 	//EN POSTMAN: 
 	/*{
